@@ -65,7 +65,7 @@ void loop() {
 
     if (ybutton == HIGH) {
       armRotateRight();
-    } else {
+    } else if(abutton == HIGH){
       armRotateLeft();
     }
 
