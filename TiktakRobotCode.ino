@@ -102,7 +102,6 @@ void clawOpen() {
   CrcLib::SetPwmOutput(CLSERVO, 500);
   CrcLib::SetPwmOutput(CRSERVO, 2500);
   CrcLib::Update();
-  
 }
 
 void pullyup(int speed) {
