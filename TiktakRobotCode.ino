@@ -64,13 +64,10 @@ void loop() {
     }
 
     if (ybutton == HIGH) {
-      CrcLib::SetPwmOutput(ARMROT, 80);
-    } else if (abutton == HIGH) {
-      CrcLib::SetPwmOutput(ARMROT, -80);
+      armRotateRight();
     } else {
-      CrcLib::SetPwmOutput(ARMROT, 0);
+      armRotateLeft();
     }
-
 
     if (rbumper == HIGH) {
       armopen(80);
@@ -88,11 +85,11 @@ void loop() {
 
 
 void armRotateRight() {
-  CrcLib::SetPwmOutput(RSERVO, )
+  CrcLib::SetPwmOutput(RSERVO, 500)
 }
 
 void armRotateLeft() {
-  CrcLib::SetPwmOutput(RSERVO, )
+  CrcLib::SetPwmOutput(RSERVO, 2500)
 }
 
 void clawClose() {
