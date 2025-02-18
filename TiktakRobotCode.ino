@@ -56,9 +56,9 @@ void loop() {
     CrcLib::MoveHolonomic(ANALOG::JOYSTICK1_Y, ANALOG::JOYSTICK1_X, ANALOG::JOYSTICK2_X, LF, BL, RF, BR);
 
     if (r2trigger > 0) {
-      pullyup(80);
+      pullyUp(80);
     } else if (l2trigger > 0) {
-      pullydown(80);
+      pullyDown(80);
     } else {
       CrcLib::SetPwmOutput(PUL, 0);
     }
@@ -104,12 +104,12 @@ void clawOpen() {
   CrcLib::Update();
 }
 
-void pullyup(int speed) {
+void pullyUp(int speed) {
   CrcLib::SetPwmOutput(PUL, speed);
   CrcLib::Update();
 }
 
-void pullydown(int speed) {
+void pullyDown(int speed) {
   CrcLib::SetPwmOutput(PUL, -speed);
   CrcLib::Update();
 }
@@ -125,7 +125,7 @@ void wait(int a) {
   };
 }
 
-void waitfast(int a) {
+void waitFast(int a) {
   CrcLib::Update();
   unsigned long x = micros();
   unsigned long y = x + a;
